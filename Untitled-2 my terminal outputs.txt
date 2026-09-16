@@ -1,0 +1,246 @@
+PS C:\Users\USER\profile-project> git add profile.html
+PS C:\Users\USER\profile-project> git commit -m "Initial commit: create profile page"
+[main (root-commit) da86170] Initial commit: create profile page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 profile.html
+PS C:\Users\USER\profile-project> git log --oneline
+da86170 (HEAD -> main) Initial commit: create profile page
+PS C:\Users\USER\profile-project> git mv profile.html index.html
+>> git commit -m "Rename profile.html to index.html"
+[main 53cc437] Rename profile.html to index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename profile.html => index.html (100%)
+PS C:\Users\USER\profile-project> touch style.css
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, 
+script file, or operable program. Check the spelling of the name, or if a path 
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch style.css
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoun 
+   dException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\USER\profile-project> git add index.html style.css  
+>> git commit -m "Add style.css and link to index.html"
+[main ec2c07a] Add style.css and link to index.html
+ 2 files changed, 11 insertions(+)
+ create mode 100644 style.css
+PS C:\Users\USER\profile-project> git add index.html style.css
+>> git commit -m "Add style.css and link to index.html"git add index.html
+error: pathspec 'git' did not match any file(s) known to git
+error: pathspec 'add' did not match any file(s) known to git
+PS C:\Users\USER\profile-project> git commit -m "Add list of current courses"
+[main 3634aa1] Add list of current courses
+ 1 file changed, 8 insertions(+)
+PS C:\Users\USER\profile-project> git log --oneline
+3634aa1 (HEAD -> main) Add list of current courses
+ec2c07a Add style.css and link to index.html
+53cc437 Rename profile.html to index.html
+da86170 Initial commit: create profile page
+PS C:\Users\USER\profile-project> git checkout -b design-update
+Switched to a new branch 'design-update'
+PS C:\Users\USER\profile-project> git add style.css
+>> git commit -m "Update background color and font styles"
+[design-update 87eb3df] Update background color and font styles
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\USER\profile-project> git checkout main
+Switched to branch 'main'
+PS C:\Users\USER\profile-project> git merge design-update
+Updating 3634aa1..87eb3df
+Fast-forward
+ style.css | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\USER\profile-project> git log --oneline
+87eb3df (HEAD -> main, design-update) Update background color and font styles
+3634aa1 Add list of current courses
+ec2c07a Add style.css and link to index.html
+53cc437 Rename profile.html to index.html
+da86170 Initial commit: create profile page
+PS C:\Users\USER\profile-project> git remote add origin https://github.com/geee3/profile-project.git
+PS C:\Users\USER\profile-project> git branch -M maingit branch -M main
+fatal: too many arguments for a rename operation
+PS C:\Users\USER\profile-project> git branch -M main
+PS C:\Users\USER\profile-project> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 1.79 KiB | 28.00 KiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/geee3/profile-project.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\USER\profile-project> cd ..
+PS C:\Users\USER> git clone https://github.com/your-username/profile-project.git profile-project-check
+Cloning into 'profile-project-check'...
+remote: Repository not found.
+fatal: repository 'https://github.com/your-username/profile-project.git/' not found
+PS C:\Users\USER> cd profile-project-check
+cd : Cannot find path 'C:\Users\USER\profile-project-check' because it does not 
+exist.
+At line:1 char:1
++ cd profile-project-check
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\USER\profile-project-ch 
+   eck:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc 
+   ationCommand
+ 
+PS C:\Users\USER> cd profile-project-check
+cd : Cannot find path 'C:\Users\USER\profile-project-check' because it does not 
+exist.
+At line:1 char:1
++ cd profile-project-check
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\USER\profile-project-ch 
+   eck:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc 
+   ationCommand
+ 
+PS C:\Users\USER> cd profile-project-check
+cd : Cannot find path 'C:\Users\USER\profile-project-check' because it does not 
+exist.
+At line:1 char:1
++ cd profile-project-check
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\USER\profile-project-ch 
+   eck:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc 
+   ationCommand
+ 
+PS C:\Users\USER> ^C
+PS C:\Users\USER> git clone https://github.com/geee3/profile-project.git-check
+Cloning into 'profile-project.git-check'...
+remote: Repository not found.
+fatal: repository 'https://github.com/geee3/profile-project.git-check/' not found
+PS C:\Users\USER> cd ..
+PS C:\Users>  git clone https://github.com/geee3/profile-project.git-check
+fatal: could not create work tree dir 'profile-project.git-check': Permission denied
+PS C:\Users> cd profile-project-check
+cd : Cannot find path 'C:\Users\profile-project-check' because it does not 
+exist.
+At line:1 char:1
++ cd profile-project-check
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\profile-project-check:S 
+   tring) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc 
+   ationCommand
+ 
+PS C:\Users> git clone https://github.com/geee3/profile-project.git profile-project-check
+fatal: could not create work tree dir 'profile-project-check': Permission denied
+PS C:\Users> cd ~
+PS C:\Users\USER>  git clone https://github.com/geee3/profile-project.git profile-project-check
+Cloning into 'profile-project-check'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 15 (delta 3), reused 15 (delta 3), pack-reused 0 (from 0)
+Receiving objects: 100% (15/15), done.
+Resolving deltas: 100% (3/3), done.
+PS C:\Users\USER> cd profile-project-check
+>> git log --oneline
+87eb3df (HEAD -> main, origin/main, origin/HEAD) Update background color and font styles
+3634aa1 Add list of current courses
+ec2c07a Add style.css and link to index.html
+53cc437 Rename profile.html to index.html
+da86170 Initial commit: create profile page
+PS C:\Users\USER\profile-project-check> git add courses.html
+fatal: pathspec 'courses.html' did not match any files
+PS C:\Users\USER\profile-project-check> git add courses.html
+fatal: pathspec 'courses.html' did not match any files
+PS C:\Users\USER\profile-project-check> cd profile-project
+cd : Cannot find path 'C:\Users\USER\profile-project-check\profile-project' 
+because it does not exist.
+At line:1 char:1
++ cd profile-project
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\USER\p...profile-projec 
+   t:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc 
+   ationCommand
+ 
+PS C:\Users\USER\profile-project-check> cd ..\profile-project
+PS C:\Users\USER\profile-project> git add courses.html
+PS C:\Users\USER\profile-project> git commit -m "Add courses.html with descriptions"
+[main 045fca9] Add courses.html with descriptions
+ 1 file changed, 29 insertions(+)
+ create mode 100644 courses.html
+PS C:\Users\USER\profile-project> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 857 bytes | 428.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/geee3/profile-project.git
+   87eb3df..045fca9  main -> main
+PS C:\Users\USER\profile-project> git log --oneline
+045fca9 (HEAD -> main, origin/main) Add courses.html with descriptions
+87eb3df (design-update) Update background color and font styles
+3634aa1 Add list of current courses
+ec2c07a Add style.css and link to index.html
+53cc437 Rename profile.html to index.html
+da86170 Initial commit: create profile page
+PS C:\Users\USER\profile-project> mv style.css CSS/style.css
+PS C:\Users\USER\profile-project> git add .
+>> git commit -m "Move style.css into CSS directory and update links"
+[main 0b9a261] Move style.css into CSS directory and update links
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+ rename style.css => CSS/style.css (100%)
+PS C:\Users\USER\profile-project> git checkout -b about-page
+Switched to a new branch 'about-page'                                
+PS C:\Users\USER\profile-project> git add .
+>> git commit -m "Add about.html with biography and CSS styling on about-page branch"
+[about-page 63d3183] Add about.html with biography and CSS styling on about-page branch
+ 1 file changed, 31 insertions(+)
+ create mode 100644 about.html
+PS C:\Users\USER\profile-project> git checkout main
+>> git merge about-page
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+Updating 0b9a261..63d3183
+Fast-forward
+ about.html | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+ create mode 100644 about.html
+PS C:\Users\USER\profile-project> git add contact.html
+>> git commit -m "Add contact.html with contact info and form"
+[main 90ca5e3] Add contact.html with contact info and form
+ 1 file changed, 36 insertions(+)
+ create mode 100644 contact.html
+PS C:\Users\USER\profile-project> git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\USER\profile-project> git add .gitignore
+>> git commit -m "Add .gitignore for logs and notes"
+[main 3021947] Add .gitignore for logs and notes
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+PS C:\Users\USER\profile-project> git push origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (14/14), 2.16 KiB | 56.00 KiB/s, done.
+Total 14 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+To https://github.com/geee3/profile-project.git
+   045fca9..3021947  main -> main
+PS C:\Users\USER\profile-project> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\USER\profile-project>                     
